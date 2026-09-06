@@ -1,0 +1,16 @@
+{
+  "name": "@qret2libc/i016-pub-probe",
+  "version": "1.0.0",
+  "description": "i016 public npm package probe 20260906 marker pub-base",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "marker-i016.txt"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "chalk": "^4.1.2"
+  }
+}
+
