@@ -1,0 +1,17 @@
+name: i016-del-ver-pub
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  del:
+    runs-on: ubuntu-latest
+    steps:
+      - name: del-version
+        run: |
+          code=$(curl -sS -o /tmp/del.json -w '%{http_code}' -X DELETE -H "Authorization: Bearer ${{ github.token }}" -H "Accept: application/vnd.github+json" "https://api.github.com/user/packages/npm/i016-pub-probe/versions/1215633269")
+          echo "I016DELVER -> $code"
+          head -c 800 /tmp/del.json
