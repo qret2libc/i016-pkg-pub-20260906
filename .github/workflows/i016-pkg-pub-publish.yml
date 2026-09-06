@@ -7,7 +7,7 @@ on:
       version:
         description: version to publish
         required: true
-        default: '1.0.0'
+        default: '1.0.1'
 permissions:
   contents: read
   packages: write
@@ -33,3 +33,4 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
